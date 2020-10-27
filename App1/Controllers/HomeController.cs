@@ -23,6 +23,16 @@ namespace App1.Controllers
             return View();
         }
 
+        public IActionResult NewsList()
+        {
+            return View(NewsVM.data);
+        }
+
+        public IActionResult News(int id)
+        {
+            var model = NewsVM.data.Where(x => x.Id == id).FirstOrDefault();
+            return View(model);
+        }
         public IActionResult Privacy()
         {
             return View();

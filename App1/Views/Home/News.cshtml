@@ -1,0 +1,13 @@
+﻿
+@model App1.Models.News
+@{
+    ViewData["Title"] = "News";
+}
+
+<h1>News</h1>
+
+<div class="news-detail">
+    <h1>@Model.Title</h1>
+    <img src="~/Img/@Model.Tumb" />
+    <p>@Model.Description</p>
+</div>
